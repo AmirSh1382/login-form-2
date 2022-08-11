@@ -105,7 +105,7 @@ function updatePasswordVaidationAlert(alertMsg, alertType) {
 
 // if there were no problemes with the inputs validation, this func will be fired by clicking on (sign up) btn
 function signUp(user) {
-  fetch("https://login-form-81e63-default-rtdb.firebaseio.com/users.json" , {
+  fetch("https://login-form-1-73c9b-default-rtdb.firebaseio.com/users.json" , {
     method: "POST",
     headers: {
       "Content-type" : "application/json"

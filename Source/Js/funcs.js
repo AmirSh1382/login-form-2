@@ -20,7 +20,7 @@ function liveUserScreenHeight() {
 
 // to get all usres from data base 
 async function getAllUsers() {
-  await fetch(`https://login-form-81e63-default-rtdb.firebaseio.com/users.json`)
+  await fetch(`https://login-form-1-73c9b-default-rtdb.firebaseio.com/users.json`)
      .then(res => res.json())
      .then(data => allUsers = Object.entries(data))
 }
