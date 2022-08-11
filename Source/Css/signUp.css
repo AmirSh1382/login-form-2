@@ -1,0 +1,197 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --background-color: #f5f5f5;
+
+    --primary-color: #e0c4fd;
+    --secondary-color: #8fc6fd;
+
+    --text-color: rgb(134, 61, 212);
+
+    --box-shadow: rgba(134, 61, 212 ,0.2);
+}
+
+body{
+    background-image: linear-gradient(135deg ,var(--secondary-color), var(--primary-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-up-alert{
+    background-color: var(--background-color);
+    border-left: 5px solid rgb(15, 215, 15);
+    border-radius: 5px;
+    visibility: hidden;
+    padding: 10px 8px;
+    margin: 0px 10px;
+    z-index: 10000;
+    opacity: 0;
+    position: fixed;
+    left: 10px;
+    top: 20px;
+}
+.sign-up-alert i{
+    color: rgb(15, 215, 15);
+}
+
+.show{
+    visibility: visible;
+    animation: fade-in 0.7s ease forwards;
+}
+
+.sign-up-form{
+    background-color: #f5f5f551;
+    backdrop-filter: blur(20px);
+    margin: 70px 0px 100px 0px;
+    border-radius: 7px;
+    padding: 30px 30px;
+    max-width: 400px;
+    width: 80%;
+}
+
+.form-title{
+    color: var(--text-color);
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-size: 50px;
+}
+
+.input-container{
+    position: relative;
+}
+
+.username-input,
+.password-input{
+    font-size: 18px;
+}
+
+.password-input:focus,
+.username-input:focus{
+    box-shadow: 0 0 0 0.25rem var(--box-shadow);
+    border-color: var(--box-shadow);
+}
+
+.eye-btn{
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.eye-btn:hover{
+    color: var(--text-color);
+}
+
+.username i,
+.password i{
+    font-size: 18px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.red-alert{
+    color: red;
+}
+
+.green-alert{
+    color: rgb(7, 176, 131);
+}
+
+.sign-up-btn{
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border-radius: 7px;
+    min-width: 130px;
+    font-size: 20px;
+    padding: 8px 0;
+    border: none;
+    transition: transform 0.1s;
+}
+
+.sign-up-btn:active{
+    transform: scale(0.9);
+}
+
+.sign-in-form-text{
+    font-size: 16px;
+}
+
+.sign-in-form-btn{
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.sign-in-form-btn:hover{
+    color: var(--text-color);
+}
+
+.footer{
+    background-color: var(--background-color);
+    border-radius: 8px 8px 0px 0px;
+    font-size: 18px;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+.footer span{
+    color: var(--text-color);
+}
+
+@keyframes fade-in{
+    0%{
+        transform: translateX(-110%);
+        visibility: visible;
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(5%);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width:468px){
+    .sign-up-form{
+        width: 85%;
+    }
+
+    .form-title{
+        font-size: 45px;
+    }
+
+    .username-input,
+    .password-input{
+        font-size: 15px;
+    }
+
+    .sign-up-btn{
+        padding: 10px 20px;
+        min-width: 80px;
+        font-size: 15px;
+    }
+
+    .login-form-text{
+        font-size: 15px;
+    }
+
+    .login-form-btn{
+        font-size: 18px;
+    }
+
+    .username-validation-alert,
+    .password-validation-alert{
+        font-size: 13px;
+    }
+}

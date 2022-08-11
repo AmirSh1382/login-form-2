@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BootStrap Icon CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- BootStrap StyleSheet -->
+    <link rel="stylesheet" href="./Source/BootStrap/Css/bootstrap.min.css">
+    <!-- Main StyleSheet -->
+    <link rel="stylesheet" href="./Source/Css/signIn.css">
+    <title>Sign In Form</title>
+</head>
+<body>
+
+    <div class="alert successfully-sign-in-alert d-flex justify-content-center align-items-center shadow">
+        <i class="bi bi-check-circle-fill me-2"></i>   
+        <div class="alert-msg">
+            <div>Signed in successfully</div>
+            <div>You will soon be transfered to Welcome page :)</div>
+        </div>
+    </div>
+
+    <div class="alert unsuccessful-sign-in-alert d-flex justify-content-center align-items-center shadow">
+        <i class="bi bi-exclamation-circle-fill me-2"></i>   
+        <div class="alert-msg">
+            <div>Wrong username or password</div>
+        </div>
+    </div>
+
+    <form class="sign-in-form shadow">
+        <h2 class="form-title text-center">Sign In</h2>
+
+        <div class="username mb-4">
+            <input class="username-input form-control pe-5" type="text" placeholder="Username">
+            <i class="bi bi-person"></i>
+        </div>        
+
+        <div class="password mb-5">
+            <input class="password-input form-control pe-5" type="password" placeholder="Password">
+            <i class="eye-btn bi bi-eye"></i>
+        </div>
+
+
+        <div class="sign-in text-center">
+            <button class="sign-in-btn">Sign In</button>
+        </div>
+
+        <div class="sign-up-form-text text-center mt-4 mt-sm-5">Dont have an account?</div>
+        <div class="text-center"><a href="./signUp.html" class="sign-up-form-btn">Sign up</a></div>
+
+    </form>
+    
+    <footer class="footer text-center py-2">
+        <div>made with  &nbsp<i class="bi bi-heart"></i>&nbsp by <span>AmirSh</span></div>
+    </footer>
+
+    <!-- BootStrap Script -->
+    <script src="./Source/BootStrap/Js/bootstrap.bundle.js"></script>
+    <!-- Main Script -->
+    <script type="module" src="./Source/Js/signIn.js"></script>
+</body>
+</html>
